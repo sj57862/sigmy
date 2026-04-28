@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Verification</title>
+    <style>
+        body, h1, h3, p, a {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #c3ecf8, #e7f0fd);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Delikatne dekoracje */
+        .container::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 223, 186, 0.3), transparent 70%);
+            top: -50%;
+            left: -50%;
+            z-index: 0;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle at 70% 70%, rgba(186, 227, 255, 0.3), transparent 70%);
+            bottom: -50%;
+            right: -50%;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #333333;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #555555;
+            font-weight: normal;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        p {
+            color: #777777;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #4caf50, #67d07f);
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.5);
+        }
+
+        .icon {
+            margin-bottom: 20px;
+        }
+
+        .icon svg {
+            width: 60px;
+            height: 60px;
+            fill: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <!-- Ikona email -->
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103 0.897 2 2 2h16c1.103 0 2-0.897 2-2V6c0-1.103-0.897-2-2-2zm0 2v0.511l-8 5-8-5V6h16zm-16 12V9.489l8 5 8-5V18H4z"/>
+                </svg>
+            </div>
+            <h1>Hello, {{username}}!</h1>
+            <h3>
+                We received a request to verify your account.
+                Click the button below to confirm your email and activate your account.
+            </h3>
+            <a class="btn" href="{{verification_link}}">Verify Your Account</a>
+            <p>
+                If you did not request this, please ignore this email.
+            </p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
