@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from .routes.auth import AUTHroute
 
 app = FastAPI()
 
@@ -21,3 +22,5 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {"detail":"connected"}
+
+app.include_router(AUTHroute)
