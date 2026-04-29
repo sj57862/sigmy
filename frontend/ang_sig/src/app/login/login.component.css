@@ -1,0 +1,72 @@
+html{
+       font-family: Poppins,Segoe UI,sans-serif;
+}
+#login {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: url('/assets/tlosurfer.jpg');
+  background-size: cover;
+  background-position: right;
+  align-items: center;
+
+}
+
+#login-form {
+  /* background-color:; */
+  width: min(40%, 600px);
+  padding: 10%;
+  border-radius: 20px 20px 20px 20px;
+  height: 100vh;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+h1{
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: 900;
+ 
+}
+form{
+    width: min(400px, 100%);
+    margin-top:20 px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+
+}
+.input-group{
+    flex-shrink: 0;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    border: 2px solid transparent;
+
+   
+
+}
+.input-group input {
+  border-radius:  0 10px 10px 0;
+  border:none;
+  box-sizing: border-box;
+
+  padding: 15px 10px 15px 0;
+  outline: none;
+  flex-grow: 1;
+  min-width: 0;
+  height: 50px;
+  padding: 1em;
+  font-size: 1rem;
+  color: #333;
+
+}
